@@ -2,7 +2,7 @@
 
 require_relative "pwa/version"
 
-module Pwa
+module PWA
   class Error < StandardError; end
   # Your code goes here...
 end
