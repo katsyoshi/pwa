@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ruby -rpwa -rpwa/server -e 'PWA::Server.new.profile(&:run)' &
+ruby -rpwa -rpwa/server -e 'PWA::Server.new(body: File.open("test.html").read).profile(&:run)' &
 foo=$!
 sleep 1
 wrk -t12 -c400 -d1s http://localhost:8080
